@@ -50,7 +50,7 @@ Output
         cin >> c[i] >> w[i];
     for (int i = 1; i <= n; i++)
     	for (int j = 0; j <= v; j++) {
-    		if (j >= c[i])
+    		if (j >= c[i]) //这个判断多余了吧。。。
         		for (int k = 0; j >= k * c[i]; k++)
         			f[i][j] = max(f[i][j], f[i - 1][j - k * c[i]] + k * w[i]);
         	else f[i][j] = f[i - 1][j];
